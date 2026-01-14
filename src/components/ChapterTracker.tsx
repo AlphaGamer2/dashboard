@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { supabase } from '@/lib/supabase';
-import { CheckCircle2, Circle, ChevronDown, ChevronUp, Plus, Minus } from 'lucide-react';
+import { CheckCircle2, Circle, ChevronDown, ChevronUp, Plus, Minus, Loader2 } from 'lucide-react';
 
 interface ChapterTrackerProps {
     chapter: any;
@@ -21,10 +21,84 @@ const BOOK_CONFIG: Record<string, string[]> = {
 
 export default function ChapterTracker({ chapter, subject }: ChapterTrackerProps) {
     const [expanded, setExpanded] = useState(false);
-    const [lecturesCompleted, setLecturesCompleted] = useState(chapter.lectures_completed || 0);
-    const [dppsCompleted, setDppsCompleted] = useState(chapter.dpps_completed || 0);
+    const [loading, setLoading] = useState(false);
+    const [lecturesCompleted, setLecturesCompleted] = useState(0);
+    const [dppsCompleted, setDppsCompleted] = useState(0);
+    const [bookCounts, setBookCounts] = useState<Record<string, Record<string, number>>>({});
 
     const books = BOOK_CONFIG[subject] || ["Module"];
+
+    useEffect(() => {
+        fetchInitialData();
+    }, []);
+
+    async function fetchInitialData() {
+        // Fetch lecture/DPP completion
+        const { data: logs } = await supabase
+            .from('tracking_logs')
+            .select('*')
+            .eq('chapter_id', chapter.id);
+
+        const lCount = logs?.filter(l => l.type === 'lecture' && l.status).length || 0;
+        const dCount = logs?.filter(l => l.type === 'dpp' && l.status).length || 0;
+        setLecturesCompleted(lCount);
+        setDppsCompleted(dCount);
+
+        // Fetch question counts
+        const { data: questions } = await supabase
+            .from('book_questions')
+            .select('*')
+            .eq('chapter_id', chapter.id);
+
+        const counts: any = {};
+        questions?.forEach(q => {
+            if (!counts[q.book_name]) counts[q.book_name] = {};
+            counts[q.book_name][q.level_name] = q.count;
+        });
+        setBookCounts(counts);
+    }
+
+    async function toggleProgress(type: 'lecture' | 'dpp', index: number) {
+        const today = new Date().toISOString().split('T')[0];
+        const { error } = await supabase
+            .from('tracking_logs')
+            .upsert({
+                chapter_id: chapter.id,
+                type,
+                item_index: index,
+                status: true,
+                date: today,
+                time_taken: 60 // Default 1 hour per session for now, user can adjust in "Daily Log"
+            }, { onConflict: 'chapter_id,type,item_index' });
+
+        if (!error) {
+            if (type === 'lecture') setLecturesCompleted(index + 1);
+            else setDppsCompleted(index + 1);
+        }
+    }
+
+    async function updateQuestionCount(book: string, level: string, delta: number) {
+        const current = (bookCounts[book]?.[level] || 0);
+        const newVal = Math.max(0, current + delta);
+
+        const today = new Date().toISOString().split('T')[0];
+        const { error } = await supabase
+            .from('book_questions')
+            .upsert({
+                chapter_id: chapter.id,
+                book_name: book,
+                level_name: level,
+                count: newVal,
+                date: today
+            }, { onConflict: 'chapter_id,book_name,level_name' });
+
+        if (!error) {
+            setBookCounts(prev => ({
+                ...prev,
+                [book]: { ...prev[book], [level]: newVal }
+            }));
+        }
+    }
 
     return (
         <div className="glass-card chapter-card">
@@ -39,7 +113,7 @@ export default function ChapterTracker({ chapter, subject }: ChapterTrackerProps
                         <span>Lectures: {lecturesCompleted}/{chapter.total_lectures}</span>
                         <div className="progress-bar"><div className="fill" style={{ width: `${(lecturesCompleted / chapter.total_lectures) * 100}%` }}></div></div>
                     </div>
-                    <div className="progress-mini">
+                    <div className="progress-mini" style={{ opacity: chapter.total_dpps ? 1 : 0 }}>
                         <span>DPPs: {dppsCompleted}/{chapter.total_dpps}</span>
                         <div className="progress-bar"><div className="fill" style={{ width: `${(dppsCompleted / chapter.total_dpps) * 100}%` }}></div></div>
                     </div>
@@ -57,24 +131,34 @@ export default function ChapterTracker({ chapter, subject }: ChapterTrackerProps
                                 <h5>Lectures</h5>
                                 <div className="track-items">
                                     {Array.from({ length: chapter.total_lectures }).map((_, i) => (
-                                        <button key={i} className={`track-btn ${i < lecturesCompleted ? 'done' : ''}`} onClick={() => setLecturesCompleted(i + 1)}>
+                                        <button
+                                            key={i}
+                                            className={`track-btn ${i < lecturesCompleted ? 'done' : ''}`}
+                                            onClick={() => toggleProgress('lecture', i)}
+                                        >
                                             {i < lecturesCompleted ? <CheckCircle2 size={16} /> : <Circle size={16} />}
                                             L{i + 1}
                                         </button>
                                     ))}
                                 </div>
                             </div>
-                            <div className="track-col">
-                                <h5>DPPs</h5>
-                                <div className="track-items">
-                                    {Array.from({ length: chapter.total_dpps }).map((_, i) => (
-                                        <button key={i} className={`track-btn ${i < dppsCompleted ? 'done' : ''}`} onClick={() => setDppsCompleted(i + 1)}>
-                                            {i < dppsCompleted ? <CheckCircle2 size={16} /> : <Circle size={16} />}
-                                            D{i + 1}
-                                        </button>
-                                    ))}
+                            {chapter.total_dpps > 0 && (
+                                <div className="track-col">
+                                    <h5>DPPs</h5>
+                                    <div className="track-items">
+                                        {Array.from({ length: chapter.total_dpps }).map((_, i) => (
+                                            <button
+                                                key={i}
+                                                className={`track-btn ${i < dppsCompleted ? 'done' : ''}`}
+                                                onClick={() => toggleProgress('dpp', i)}
+                                            >
+                                                {i < dppsCompleted ? <CheckCircle2 size={16} /> : <Circle size={16} />}
+                                                D{i + 1}
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </section>
 
@@ -89,9 +173,9 @@ export default function ChapterTracker({ chapter, subject }: ChapterTrackerProps
                                             <div key={level} className="level-row">
                                                 <span className="level-label">{level}</span>
                                                 <div className="counter">
-                                                    <button className="cnt-btn"><Minus size={12} /></button>
-                                                    <input type="number" defaultValue={0} readOnly />
-                                                    <button className="cnt-btn"><Plus size={12} /></button>
+                                                    <button className="cnt-btn" onClick={() => updateQuestionCount(book, level, -1)}><Minus size={12} /></button>
+                                                    <input type="number" value={bookCounts[book]?.[level] || 0} readOnly />
+                                                    <button className="cnt-btn" onClick={() => updateQuestionCount(book, level, 1)}><Plus size={12} /></button>
                                                 </div>
                                             </div>
                                         ))}
