@@ -1,0 +1,444 @@
+/* V11 Neural & Symmetry Matrix Styles */
+
+.fitness-page.v11,
+.analytics-page.v11 {
+    padding-bottom: 80px;
+}
+
+/* 🚀 Header V11 */
+.page-header-v11 {
+    padding: 80px 40px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5), transparent);
+}
+
+.view-toggle-v11 {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.view-toggle-v11 .toggle-btn {
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 800;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.view-toggle-v11 .toggle-btn.active {
+    background: #ffffff;
+    color: #000;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 📊 Metric Shelf V11 */
+.metric-shelf-v11 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 40px;
+}
+
+.m-card.luxury {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.m-label {
+    font-size: 0.7rem;
+    font-weight: 950;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+.m-val {
+    font-size: 1.5rem;
+    font-weight: 950;
+    color: #ffffff;
+}
+
+.m-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.m-bar .fill.gold {
+    background: var(--royal-gold);
+    box-shadow: 0 0 10px var(--royal-gold-glow);
+}
+
+/* 📈 Grid V11 */
+.grid-v11 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 20px 40px;
+}
+
+.span-3 {
+    grid-column: span 3;
+}
+
+/* 📂 Chapter Mastery List */
+.mastery-list-v11 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.m-item {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.i-head {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 850;
+    font-size: 0.85rem;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.i-track {
+    height: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.i-fill {
+    height: 100%;
+    border-radius: 3px;
+}
+
+.i-sub {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-top: 4px;
+}
+
+/* 🧊 Symmetry Matrix Components */
+.goals-matrix-v11 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.goal-strip {
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.g-tag {
+    font-size: 0.6rem;
+    font-weight: 950;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.g-tag.main {
+    background: var(--royal-gold);
+    color: #000;
+}
+
+.g-plane {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.goal-strip h4 {
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+}
+
+.b-track {
+    height: 4px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+.b-fill {
+    height: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.system-grid-v11 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.s-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+}
+
+.s-lab {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.s-val {
+    font-size: 1.25rem;
+    font-weight: 950;
+    color: #fff;
+}
+
+.history-matrix-v11 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.h-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px !important;
+}
+
+.h-date-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-weight: 800;
+    font-size: 0.8rem;
+    width: 150px;
+}
+
+.h-type-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.h-type {
+    font-weight: 950;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    width: 100px;
+}
+
+.h-type.push {
+    color: var(--primary);
+}
+
+.h-type.pull {
+    color: var(--secondary);
+}
+
+.h-type.rest {
+    color: var(--text-muted);
+}
+
+.h-weight {
+    color: #ffffff;
+    font-weight: 800;
+    opacity: 0.6;
+}
+
+.h-view-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+/* ⚡ V11 Modals & Inputs */
+.v11-modal {
+    padding: 48px !important;
+    border-radius: 28px !important;
+    width: 500px !important;
+}
+
+.v11-modal.wide {
+    width: 800px !important;
+}
+
+.h1-royal.small {
+    font-size: 2.5rem;
+}
+
+.v11-input {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    color: #fff !important;
+    font-weight: 800 !important;
+}
+
+.v11-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 24px;
+}
+
+.v11-form-grid .full {
+    grid-column: span 2;
+}
+
+.protocol-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.protocol-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 24px;
+    border-radius: 16px;
+    color: #fff;
+    font-weight: 950;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.protocol-btn:hover {
+    background: #ffffff;
+    color: #000;
+    transform: translateY(-4px);
+}
+
+/* 📑 Logger Summary V11 */
+.block-summary-v11 {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.s-head {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.s-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.s-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.s-ex {
+    font-weight: 900;
+    color: #fff;
+}
+
+.s-val {
+    font-weight: 850;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.finish-block-btn {
+    background: #ffffff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 950;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.add-ex-btn-v11 {
+    padding: 40px !important;
+    border: 2px dashed rgba(255, 255, 255, 0.1) !important;
+    background: transparent !important;
+    color: var(--text-muted) !important;
+    font-weight: 900 !important;
+    border-radius: 20px !important;
+}
+
+/* 🌟 Animations */
+.anim-fade-in {
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* V12 Navigation & Recaps */
+.back-btn-v12 {
+    background: rgba(255,255,255,0.05); color: #fff; border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 16px; border-radius: 8px; font-size: 0.75rem; font-weight: 900;
+    text-transform: uppercase; cursor: pointer; display: flex; align-items: center; gap: 8px;
+    margin-bottom: 20px; transition: 0.3s;
+}
+.back-btn-v12:hover { background: #fff; color: #000; }
+.rotate-90 { transform: rotate(90deg); }

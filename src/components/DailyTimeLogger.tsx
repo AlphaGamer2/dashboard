@@ -62,8 +62,9 @@ export default function DailyTimeLogger() {
             <div className="logger-body">
                 <input
                     type="number"
+                    min="0"
                     value={time}
-                    onChange={(e) => setTime(parseInt(e.target.value) || 0)}
+                    onChange={(e) => setTime(Math.max(0, parseInt(e.target.value) || 0))}
                     placeholder="Minutes"
                 />
                 <span>min</span>

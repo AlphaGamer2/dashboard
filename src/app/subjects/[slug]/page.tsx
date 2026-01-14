@@ -10,8 +10,9 @@ const SLUG_TO_NAME: Record<string, string> = {
     'organic-chemistry': 'Organic Chemistry',
 };
 
-export default async function SubjectPage({ params }: { params: { slug: string } }) {
-    const subjectName = SLUG_TO_NAME[params.slug];
+export default async function SubjectPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const subjectName = SLUG_TO_NAME[slug];
 
     if (!subjectName) {
         notFound();

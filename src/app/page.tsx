@@ -17,14 +17,14 @@ export default function Home() {
             <Flame className="icon-orange" />
             <div>
               <p className="label">Daily Streak</p>
-              <p className="value">12 Days</p>
+              <p className="value">0 Days</p>
             </div>
           </div>
           <div className="status-item">
             <Target className="icon-green" />
             <div>
               <p className="label">Topics to Go</p>
-              <p className="value">45 Chapters</p>
+              <p className="value">Syllabus Loaded</p>
             </div>
           </div>
         </div>
@@ -35,15 +35,15 @@ export default function Home() {
         <div className="stats-grid">
           <div className="glass-card stat-item">
             <p className="label">Hours Studied</p>
-            <p className="valueLarge">42.5</p>
+            <p className="valueLarge">0.0</p>
           </div>
           <div className="glass-card stat-item">
             <p className="label">Questions Solved</p>
-            <p className="valueLarge">1,240</p>
+            <p className="valueLarge">0</p>
           </div>
           <div className="glass-card stat-item">
             <p className="label">Overall Progress</p>
-            <p className="valueLarge">32%</p>
+            <p className="valueLarge">0%</p>
           </div>
         </div>
       </section>
