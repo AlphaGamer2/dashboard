@@ -1,0 +1,368 @@
+{
+  "Inorganic Chemistry": [
+    {
+      "Chapter No": "CH-01",
+      "Chapter Name": "Periodic Table",
+      "Total Lectures": 14,
+      "Lectures Completed": 14,
+      "Total DPPs": 9,
+      "DPPs Completed": 9
+    },
+    {
+      "Chapter No": "CH-02",
+      "Chapter Name": "Chemical Bonding",
+      "Total Lectures": 25,
+      "Lectures Completed": 3,
+      "Total DPPs": 14,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-03",
+      "Chapter Name": "P-block",
+      "Total Lectures": 8,
+      "Lectures Completed": 0,
+      "Total DPPs": 4,
+      "DPPs Completed": 0
+    }
+  ],
+  "Math": [
+    {
+      "Chapter No": "CH-01",
+      "Chapter Name": "Basic Mathematics",
+      "Total Lectures": 20,
+      "Lectures Completed": 4,
+      "Total DPPs": 16,
+      "DPPs Completed": 2
+    },
+    {
+      "Chapter No": "CH-02",
+      "Chapter Name": "Sets",
+      "Total Lectures": 6,
+      "Lectures Completed": 0,
+      "Total DPPs": 6,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-03",
+      "Chapter Name": "Trigonometric Functions",
+      "Total Lectures": 13,
+      "Lectures Completed": 10,
+      "Total DPPs": 12,
+      "DPPs Completed": 2
+    },
+    {
+      "Chapter No": "CH-04",
+      "Chapter Name": "Trigonometric Equation",
+      "Total Lectures": 8,
+      "Lectures Completed": 0,
+      "Total DPPs": 6,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-05",
+      "Chapter Name": "Quadratic Equations",
+      "Total Lectures": 14,
+      "Lectures Completed": 0,
+      "Total DPPs": 13,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-06",
+      "Chapter Name": "Sequence and Series",
+      "Total Lectures": 12,
+      "Lectures Completed": 0,
+      "Total DPPs": 12,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-07",
+      "Chapter Name": "Relations and Functions",
+      "Total Lectures": 5,
+      "Lectures Completed": 0,
+      "Total DPPs": 5,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-08",
+      "Chapter Name": "Permutations and Combinations",
+      "Total Lectures": 12,
+      "Lectures Completed": 0,
+      "Total DPPs": 12,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-09",
+      "Chapter Name": "Binomial Theorem",
+      "Total Lectures": 11,
+      "Lectures Completed": 0,
+      "Total DPPs": 10,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-10",
+      "Chapter Name": "Limits and Derivatives",
+      "Total Lectures": 3,
+      "Lectures Completed": 0,
+      "Total DPPs": 2,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-11",
+      "Chapter Name": "Linear Inequalities",
+      "Total Lectures": 1,
+      "Lectures Completed": 0,
+      "Total DPPs": 1,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-12",
+      "Chapter Name": "Straight Lines",
+      "Total Lectures": 13,
+      "Lectures Completed": 0,
+      "Total DPPs": 10,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-13",
+      "Chapter Name": "Circles",
+      "Total Lectures": 10,
+      "Lectures Completed": 0,
+      "Total DPPs": 8,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-14",
+      "Chapter Name": "Parabola",
+      "Total Lectures": 9,
+      "Lectures Completed": 0,
+      "Total DPPs": 7,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-15",
+      "Chapter Name": "Ellipse",
+      "Total Lectures": 4,
+      "Lectures Completed": 0,
+      "Total DPPs": 3,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-16",
+      "Chapter Name": "Probability (XI)",
+      "Total Lectures": 1,
+      "Lectures Completed": 0
+    },
+    {
+      "Chapter No": "CH-17",
+      "Chapter Name": "Introduction to 3D",
+      "Total Lectures": 1,
+      "Lectures Completed": 0
+    }
+  ],
+  "Organic Chemistry": [
+    {
+      "Chapter No": "CH-01",
+      "Chapter Name": "Some Basic Principles of Organic Chemistry - I",
+      "Total Lectures": 11,
+      "Lectures Completed": 0,
+      "Total DPPs": 10,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-02",
+      "Chapter Name": "Some Basic Principles of Organic Chemistry - II",
+      "Total Lectures": 12,
+      "Lectures Completed": 0,
+      "Total DPPs": 10,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-03",
+      "Chapter Name": "Some Basic Principles of Organic Chemistry - III",
+      "Total Lectures": 6,
+      "Lectures Completed": 0,
+      "Total DPPs": 5,
+      "DPPs Completed": 0
+    }
+  ],
+  "Physical Chemistry": [
+    {
+      "Chapter No": "CH-01",
+      "Chapter Name": "Mole Concept",
+      "Total Lectures": 22,
+      "Lectures Completed": 6,
+      "Total DPPs": 13,
+      "DPPs Completed": 2
+    },
+    {
+      "Chapter No": "CH-02",
+      "Chapter Name": "Structure of Atom",
+      "Total Lectures": 16,
+      "Lectures Completed": 0,
+      "Total DPPs": 10,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-03",
+      "Chapter Name": "State of Matter",
+      "Total Lectures": 9,
+      "Lectures Completed": 0,
+      "Total DPPs": 6,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-04",
+      "Chapter Name": "Thermodynamics",
+      "Total Lectures": 13,
+      "Lectures Completed": 0,
+      "Total DPPs": 9,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-05",
+      "Chapter Name": "Redox Reaction",
+      "Total Lectures": 5,
+      "Lectures Completed": 0,
+      "Total DPPs": 3,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-06",
+      "Chapter Name": "Chemical Equilibrium",
+      "Total Lectures": 7,
+      "Lectures Completed": 0,
+      "Total DPPs": 4,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-07",
+      "Chapter Name": "Ionic Equilibrium",
+      "Total Lectures": 7,
+      "Lectures Completed": 0,
+      "Total DPPs": 3,
+      "DPPs Completed": 0
+    }
+  ],
+  "Physics": [
+    {
+      "Chapter No": "CH-01",
+      "Chapter Name": "Units and Dimension",
+      "Total Lectures": 11,
+      "Lectures Completed": 0,
+      "Total DPPs": 10,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-02",
+      "Chapter Name": "Basic Maths",
+      "Total Lectures": 3,
+      "Lectures Completed": 3
+    },
+    {
+      "Chapter No": "CH-03",
+      "Chapter Name": "Vectors",
+      "Total Lectures": 14,
+      "Lectures Completed": 3,
+      "Total DPPs": 5,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-04",
+      "Chapter Name": "Motion in a Straight Line",
+      "Total Lectures": 17,
+      "Lectures Completed": 17,
+      "Total DPPs": 14,
+      "DPPs Completed": 1
+    },
+    {
+      "Chapter No": "CH-05",
+      "Chapter Name": "Errors and Measurements",
+      "Total Lectures": 3,
+      "Lectures Completed": 0
+    },
+    {
+      "Chapter No": "CH-06",
+      "Chapter Name": "Motion in a Plane",
+      "Total Lectures": 16,
+      "Lectures Completed": 15,
+      "Total DPPs": 7,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-07",
+      "Chapter Name": "Laws of Motion",
+      "Total Lectures": 15,
+      "Lectures Completed": 2,
+      "Total DPPs": 5,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-08",
+      "Chapter Name": "Circular Motion",
+      "Total Lectures": 6,
+      "Lectures Completed": 0,
+      "Total DPPs": 4,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-09",
+      "Chapter Name": "Work, Power, Energy",
+      "Total Lectures": 14,
+      "Lectures Completed": 0,
+      "Total DPPs": 7,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-10",
+      "Chapter Name": "Centre of Mass",
+      "Total Lectures": 16,
+      "Lectures Completed": 0,
+      "Total DPPs": 9,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-11",
+      "Chapter Name": "Thermal Properties of Matter",
+      "Total Lectures": 12,
+      "Lectures Completed": 0,
+      "Total DPPs": 7,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-12",
+      "Chapter Name": "Mechanical Properties of Solids",
+      "Total Lectures": 2,
+      "Lectures Completed": 0
+    },
+    {
+      "Chapter No": "CH-13",
+      "Chapter Name": "Rotational Motion",
+      "Total Lectures": 25,
+      "Lectures Completed": 0,
+      "Total DPPs": 8,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-14",
+      "Chapter Name": "KTG and Thermodynamics",
+      "Total Lectures": 6,
+      "Lectures Completed": 0,
+      "Total DPPs": 2,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-15",
+      "Chapter Name": "Oscillations",
+      "Total Lectures": 10,
+      "Lectures Completed": 0,
+      "Total DPPs": 6,
+      "DPPs Completed": 0
+    },
+    {
+      "Chapter No": "CH-16",
+      "Chapter Name": "Waves",
+      "Total Lectures": 2,
+      "Lectures Completed": 0
+    }
+  ]
+}
